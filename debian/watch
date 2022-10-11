@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/libltc-$1.tar.gz/ \
+  https://github.com/x42/libltc/tags .*/v?(\d\S*)\.tar\.gz

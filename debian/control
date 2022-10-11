@@ -1,0 +1,58 @@
+Source: libltc
+Section: libs
+Priority: optional
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Uploaders:
+ Jaromír Mikeš <mira.mikes@seznam.cz>
+Build-Depends:
+ debhelper-compat (= 12)
+Build-Depends-Indep:
+ doxygen
+Standards-Version: 4.4.0
+Homepage: https://github.com/x42/libltc
+Vcs-Git: https://salsa.debian.org/multimedia-team/libltc.git
+Vcs-Browser: https://salsa.debian.org/multimedia-team/libltc
+
+Package: libltc-dev
+Section: libdevel
+Architecture: any
+Depends:
+ libltc11(= ${binary:Version}),
+ ${misc:Depends}
+Multi-Arch: same
+Description: Development files for libltc
+ Linear (or Longitudinal) Timecode (LTC) is an encoding of SMPTE timecode data
+ as a Manchester-Biphase encoded audio signal. The audio signal is commonly
+ recorded on a VTR track or other storage media.
+ libltc provides functionality to both encode and decode LTC from/to timecode.
+ .
+ This package contains files needed for application development.
+
+Package: libltc-doc
+Section: doc
+Architecture: all
+Depends:
+ ${misc:Depends}
+Multi-Arch: foreign
+Description: Documentation for libltc
+ Linear (or Longitudinal) Timecode (LTC) is an encoding of SMPTE timecode data
+ as a Manchester-Biphase encoded audio signal. The audio signal is commonly
+ recorded on a VTR track or other storage media.
+ libltc provides functionality to both encode and decode LTC from/to timecode.
+ .
+ This package contains the API reference (as manpages) for the development of
+ applications.
+
+Package: libltc11
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Multi-Arch: same
+Description: linear timecode library
+ Linear (or Longitudinal) Timecode (LTC) is an encoding of SMPTE timecode data
+ as a Manchester-Biphase encoded audio signal. The audio signal is commonly
+ recorded on a VTR track or other storage media.
+ libltc provides functionality to both encode and decode LTC from/to timecode.
+ .
+ This package provides the shared library.
